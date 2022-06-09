@@ -603,16 +603,20 @@ footer{
 
 /* --------------------- Inicia reservas.html--------------------- */
 
-#headerReservas{
+#reservas{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4,auto);
     grid-template-areas: 
-    "logo  navBar         navBar         navBar"
-    "  .   textos-header  textos-header    .  "
-    "  .   textos-header  textos-header    .  "
-    "wave  wave           wave           wave"
+    "header  header  header  header  header  header"
+    "power   power   power   power   power   power"
+    "nav-b   nav-b   nav-b   nav-b   nav-b   nav-b"
+    "pie     pie     pie     pie     pie     pie"
     ;
+}
+
+#headerReservas{
+    grid-area: header;
     width: 100%;
     height: 600px;
     background: #2980B9;  /* fallback for old browsers */
@@ -623,6 +627,18 @@ footer{
     background-size: cover; /* para que la imagen cubra todo el espacio */
     background-attachment: fixed;
     position: relative;
+}
+
+.navBar-baja{
+    grid-area: nav-b;
+}
+
+.power{
+    grid-area: power;
+}
+
+.pie{
+    grid-column: pie;
 }
 
 .carousel{
